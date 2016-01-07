@@ -59,6 +59,9 @@ static const interop_addr_t interop_addr_database[] = {
   // BMW car kits (Harman/Becker)
   {{0x9c, 0xdf, 0x03,       0,0,0}, 3, INTEROP_AUTO_RETRY_PAIRING},
 
+  // Jaybird Family
+  {{0x00, 0x18, 0x91,       0,0,0}, 3, INTEROP_2MBPS_LINK_ONLY},
+
   // JayBird BlueBuds X - low granularity on volume control
   {{0x44, 0x5e, 0xf3,       0,0,0}, 3, INTEROP_DISABLE_ABSOLUTE_VOLUME},
 
