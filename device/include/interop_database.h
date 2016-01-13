@@ -62,9 +62,6 @@ static const interop_addr_t interop_addr_database[] = {
   // Ausdom M05 - unacceptably loud volume
   {{0xa0, 0xe9, 0xdb,       0,0,0}, 3, INTEROP_DISABLE_ABSOLUTE_VOLUME},
 
-  // Jaybird Family
-  {{0x00, 0x18, 0x91,       0,0,0}, 3, INTEROP_2MBPS_LINK_ONLY},
-
   // JayBird BlueBuds X - low granularity on volume control
   {{0x44, 0x5e, 0xf3,       0,0,0}, 3, INTEROP_DISABLE_ABSOLUTE_VOLUME},
 
