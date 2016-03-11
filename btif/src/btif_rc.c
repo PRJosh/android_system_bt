@@ -41,7 +41,6 @@
 #include "btif_util.h"
 #include "btif_av.h"
 #include "hardware/bt_rc.h"
-#include "device/include/interop.h"
 #include "uinput.h"
 #include "bdaddr.h"
 
@@ -435,13 +434,6 @@ void close_uinput (void)
 #if (AVRC_CTLR_INCLUDED == TRUE)
 void handle_rc_ctrl_features(int index)
 {
-    btrc_remote_features_t rc_features = BTRC_FEAT_NONE;
-    bt_bdaddr_t rc_addr;
-    bdcpy(rc_addr.address, btif_rc_cb.rc_addr);
-
-    if (interop_match(INTEROP_DISABLE_ABSOLUTE_VOLUME, &rc_addr))
-        btif_rc_cb.rc_features &= ~BTA_AV_FEAT_ADV_CTRL;
-
     if ((btif_rc_cb[index].rc_features & BTA_AV_FEAT_RCTG)||
        ((btif_rc_cb[index].rc_features & BTA_AV_FEAT_RCCT)&&
         (btif_rc_cb[index].rc_features & BTA_AV_FEAT_ADV_CTRL)))
